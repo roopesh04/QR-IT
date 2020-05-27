@@ -1,8 +1,4 @@
 const mongoose=require('mongoose')
-const express=require('express')
-const validator=require('validator')
-const bcrypt=require('bcryptjs')
-const jwt=require('jsonwebtoken')
 
 const PatientSchema=new mongoose.Schema({
     name:{
@@ -21,7 +17,7 @@ const PatientSchema=new mongoose.Schema({
         }
     }],
     doctor:{
-        type: mongoose.Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'User'
     }
 },{
